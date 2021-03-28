@@ -154,4 +154,23 @@ return view('welcome')->withName('Sohel Amin')->withEmail('sohelamin@example.com
 view()->share('data', [1, 2, 3]);
 
 ```
+### Laravel essential command
 
+
+| Command | Description |
+| --- | --- |
+| `php artisan serve` | To Run Laravel Application |
+| `php artisan make:controller ControllerName ` | To Make New Controller |
+| `php artisan make:Model ModelName` | To Make New Model|
+| `php artisan make:Middleware MiddlewareName` | To Make Middleware Class|
+| `php artisan make:migration tablename` | To Make migration File |
+| `php artisan migrate` | To Run migrate |
+
+### Laravel clear cache essential command
+
+| Command | Description |
+| --- | --- |
+| `php artisan cache:clear` | Clear Application Cache |
+| `php artisan route:clear ` | Clear Route Cache |
+| `php artisan config:clear ` | Clear Config Cache |
+| `php artisan view:clear ` | Clear Compiled View Files|
