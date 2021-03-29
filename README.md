@@ -174,3 +174,21 @@ view()->share('data', [1, 2, 3]);
 | `php artisan route:clear ` | Clear Route Cache |
 | `php artisan config:clear ` | Clear Config Cache |
 | `php artisan view:clear ` | Clear Compiled View Files|
+
+
+
+### Laravel -Application Necessary Folder Structure:
+
+* App->Http->Controllers
+* App->Http->Middleware
+* bootstrap->cache.php
+* Config->cache.php,session.php,mail.php,view.php
+* database->migrations
+* public->.htaccess,favican.ico,robots.txt(google Search),index.php(Run Application)
+* resources->js,lang,sass,views(welcome.blade.php)
+* routes->web.php,api.php
+* .env-(enverment variable, Database Connection)
+* composer.json-> install package/libraries info
+* package.json-> package info
+
+
