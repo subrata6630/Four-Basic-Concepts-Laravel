@@ -157,9 +157,9 @@ view()->share('data', [1, 2, 3]);
 
 ### 04.Controller: 
 
-![Screenshot](screenshot.png)
+![Screenshot](why-controller.png)
 
-![Screenshot](screenshot.png)
+![Screenshot](types-controllers.png)
 
 ### Laravel essential command
 
