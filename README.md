@@ -161,6 +161,11 @@ view()->share('data', [1, 2, 3]);
 
 ![Screenshot](types-controllers.png)
 
+![Screenshot](type-laravel-controller.png)
+
+
+
+
 ### Laravel essential command
 
 
