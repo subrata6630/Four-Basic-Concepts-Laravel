@@ -154,6 +154,13 @@ return view('welcome')->withName('Sohel Amin')->withEmail('sohelamin@example.com
 view()->share('data', [1, 2, 3]);
 
 ```
+
+### 04.Controller: 
+
+![Screenshot](screenshot.png)
+
+![Screenshot](screenshot.png)
+
 ### Laravel essential command
 
 
