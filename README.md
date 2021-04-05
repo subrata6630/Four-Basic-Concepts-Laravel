@@ -166,7 +166,7 @@ view()->share('data', [1, 2, 3]);
 ![Screenshot](type-laravel-controller.png)
 
 
-### middleware: 
+###  05 Middleware: 
 এইচটিটিপি মিডলওয়্যার আপনার অ্যাপ্লিকেশনটিতে প্রবেশকারী এইচটিটিপি অনুরোধগুলি ফিল্টার করার জন্য একটি সুবিধাজনক প্রক্রিয়া সরবরাহ করে।
 
 উদাহরণস্বরূপ, Laravel Framework এ Middleware হচ্ছে আপনার application এ বিভিন্ন সোর্স থেকে আসা HTTP request গুলোকে controller এ পাঠানোর আগে filtering করার একটা দুর্দান্ত Mechanism বা পদ্ধতি। ধরুন Laravel authentication Middleware এর কথাই ধরা যাক, যখন আপনার application এ কোনো user লগইন করতে চায়, সেক্ষেত্রে Laravel authentication Middleware কাজ হচ্ছে যেই user লগইন করতে চায় , তাকে authentication Middleware নিজে Middle Man হিসেবে verify করবে , যদি ইউজার authenticated না হয় , তাহলে Laravel authentication Middleware সেই user কে login screen এ পাঠাবে , আর যদি authenticated হন, তাহলে laravel authentication Middleware ইউজারকে পরবর্তী কাজ করার বা পরবর্তী ধাপে যাওয়ার অনুমতি প্রধান করবে। সহজ ভাবে বলা যায় , আপনার application এ যেকোনো request এর পর এবং response এর পূর্বে সব ধরণের verification এবং authentication করার Mechanism হচ্ছে Laravel Middleware. Laravel এ Middleware ফাইল গুলা app/Http/Middleware এই ডিরেক্টরিতে রাখতে হয়।
