@@ -4,7 +4,7 @@
 * Model
 * View 
 * Controller 
-
+* middleware
 
 ### 01. Route:
 ধারণত ইংরেজি শব্দ route যাকে অনেক সময় আমরা বাংলায় বলি রুট যার অর্থ দাঁড়ায় গন্তব্যস্থলে পৌঁছানোর রাস্তা। আর Laravel Application এ route হচ্ছে URL থেকে request গ্রহণ করে এবং application কে resource এর জন্য নির্দেশনা প্রদান করে। আরো সহজ ভাবে বলা যায় route হল আপনার অ্যাপ্লিকেশনের একটি request এর বিপরীতে কোন URL টি hit হবে? বা কোথায় থেকে কি response করবে তা নির্ধারণের একটি উপায়। Laravel 5.5 এ সব route গুলো routes ফোল্ডারে তৈরী করা থাকে। এর মধ্যে web application এর route সমূহ routes/web.php তে লিখা হয়। এবং API এর জন্য route সমূহ routes/api.php তে লিখা হয়। Laravel Framework এ route এর সবচেয়ে বড় সুবিধা হচ্ছে আপনি এক যায়গা থেকেই সমস্ত route কে নিয়ন্ত্রণ করতে পারবেন অর্থাৎ পরবর্তিতে route সম্পর্কিত যেকোনো ধরনের পরিবর্তন এখান থেকেই করতে পারবেন।
@@ -166,8 +166,22 @@ view()->share('data', [1, 2, 3]);
 ![Screenshot](type-laravel-controller.png)
 
 
+### middleware: 
+এইচটিটিপি মিডলওয়্যার আপনার অ্যাপ্লিকেশনটিতে প্রবেশকারী এইচটিটিপি অনুরোধগুলি ফিল্টার করার জন্য একটি সুবিধাজনক প্রক্রিয়া সরবরাহ করে।
 
+উদাহরণস্বরূপ, Laravel Framework এ Middleware হচ্ছে আপনার application এ বিভিন্ন সোর্স থেকে আসা HTTP request গুলোকে controller এ পাঠানোর আগে filtering করার একটা দুর্দান্ত Mechanism বা পদ্ধতি। ধরুন Laravel authentication Middleware এর কথাই ধরা যাক, যখন আপনার application এ কোনো user লগইন করতে চায়, সেক্ষেত্রে Laravel authentication Middleware কাজ হচ্ছে যেই user লগইন করতে চায় , তাকে authentication Middleware নিজে Middle Man হিসেবে verify করবে , যদি ইউজার authenticated না হয় , তাহলে Laravel authentication Middleware সেই user কে login screen এ পাঠাবে , আর যদি authenticated হন, তাহলে laravel authentication Middleware ইউজারকে পরবর্তী কাজ করার বা পরবর্তী ধাপে যাওয়ার অনুমতি প্রধান করবে। সহজ ভাবে বলা যায় , আপনার application এ যেকোনো request এর পর এবং response এর পূর্বে সব ধরণের verification এবং authentication করার Mechanism হচ্ছে Laravel Middleware. Laravel এ Middleware ফাইল গুলা app/Http/Middleware এই ডিরেক্টরিতে রাখতে হয়।
 
+### Laravel Framework এ কি কি ধরণের Middleware আছে?
+Laravel এ authentication Middleware এর পাশাপাশি আরো অনেক গুলো Middleware বিভিন্ন কাজের জন্য লিখা হয়েছে, যেমন: সব গুলো রেসপন্স application ত্যাগ করার আগে তার সঠিক header গুলো সংযুক্ত করার জন্য তৈরী করা হয়েছে CORS Middleware . আর incoming request এর লগ রাখার জন্য logging Middleware তৈরী করা হয়েছে। এছাড়াও CSRF protection এর জন্য CSRF Middleware । এছাড়া আপনার নিজের প্রয়োজন মতো বিভিন্ন Custom Middleware খুব সহজে তৈরী করে নিতে পারেন।
+
+### Middleware ব্যবহার করে আপনার application এর কোন কোন কাজ গুলো করতে পারেন ?
+Laravel Framework এ Middleware ব্যবহার করে আমরা বিভিন্ন ধরণের কাজ করতে পারি, তারমধ্যে উল্লেখযোগ্য হচ্ছে :
+
+১. আপনার Application এর Request গুলোর Log রাখতে পারেন।
+২. বিভিন্ন Condition এর উপর ভিত্তি করে ইউজারদেরকে ভিন্ন ভিন্ন page এ redirect করতে পারেন।
+৩. আপনার Application এ Incoming Parameters গুলোকে altering এবং sanitizing করতে পারেন।
+৪. Response গুলোকে Manipulate করতে পারেন।
+৫. এবং আরো অনেক কিছু
 
 ### Laravel essential command
 
