@@ -204,6 +204,16 @@ Laravel Framework এ Middleware ব্যবহার করে আমরা �
 | `php artisan config:clear ` | Clear Config Cache |
 | `php artisan view:clear ` | Clear Compiled View Files|
 
+### Blade Template Commands
+
+| Command | Description |
+| --- | --- |
+| `@yield` | এটি যেকোনো value প্রদর্শন করতে ব্যবহৃত হয়। |
+| `@section` | এটি Template এর যেকোনো section define করতে ব্যবহৃত হয়। |
+| `@endsection` | এটি define করা section end করতে ব্যবহৃত হয়।|
+| `@include` | এক view file কে অন্য view file এ include করার জন্য ব্যবহৃত হয়। |
+| `{{ asset('your_asset_file_path') }}` | css file, js file এবং যেকোনো image link করার জন্য ব্যবহৃত হয়।|
+| `{{URL::to('/your_page_name')}}` | এটা মূলতঃ বিভিন্ন page এর সাথে লিংক করার জন্য ব্যবহৃত হয়|
 
 
 ### Laravel -Application Necessary Folder Structure:
